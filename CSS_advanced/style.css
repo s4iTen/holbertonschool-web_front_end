@@ -120,17 +120,18 @@ header a img {
     border-radius: 22px;
     border: none;
     background: #C271FF;
+    font-family: Source Sans Pro;
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
-}
-.hero-btn p {
     color: #FFF;
     text-align: center;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
+
 .second-hero-div{
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -342,4 +343,59 @@ header a img {
     font-style: normal;
     font-weight: 600;
     line-height: 27px; /* 192.857% */
+}
+
+.sec4 {
+    width: 100%;
+    height: 502px;
+    background-color: #071629;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.sec4 h1 {
+    color: #FFF;
+    font-family: Source Sans Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.sec4-div1 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.sec4-div1-div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.sec4-div1-div img{
+    margin-bottom: 27px;
+}
+.sec4-div1-div h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 144.444% */
+    margin-bottom: 13px;
+}
+.sec4-div1-div p {
+    color: #FFF;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
 }
