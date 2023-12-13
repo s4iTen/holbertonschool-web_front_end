@@ -125,8 +125,6 @@ header a img {
 .hero-btn p {
     color: #FFF;
     text-align: center;
-    font-family: Source Sans Pro;
-    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -247,4 +245,101 @@ header a img {
     font-style: italic;
     font-weight: 400;
     line-height: 33.6px; /* 152.727% */
+}
+.sec3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
+}
+.sec3-div1 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 450px;
+    margin: auto;
+    justify-content: space-between;
+}
+.titleh1 {
+    color: #071629;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+.sec3-div1-div {
+    position: relative;
+}
+.image-vid {
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.image-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+.sec3-div1-div h1 {
+    color: #071629;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+.sec3-div1-div p {
+    color: rgba(7, 22, 41, 0.50);
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+.person {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #C271FF;
+}
+.person h2 {
+    font-family:  Source Sans Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; /* 192.857% */
+}
+.person img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+}
+.rating p {
+    color: #C271FF;
+    text-align: right;
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; /* 192.857% */
 }
