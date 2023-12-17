@@ -7,7 +7,9 @@ $wcolor:#FF0000;
 }
 .success {
     color: $succolor;
+    @extend .info
 }
 .warning {
     color: $wcolor;
+    @extend .info
 }
