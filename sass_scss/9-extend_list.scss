@@ -1,0 +1,13 @@
+/* My style */ 
+$font: 12px;
+$succolor: #00FF00;
+$wcolor:#FF0000;
+.info, .success, .warning {
+    font-size: $font;
+}
+.success {
+    color: $succolor;
+}
+.warning {
+    color: $wcolor;
+}
