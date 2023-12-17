@@ -1,11 +1,12 @@
 /* My style */
-$bodymargin:10px;
-$divmargin:15px;
-body {
-    margin-left: $bodymargin;
-    margin-right: $bodymargin;
+@mixin margins($bodymargin: 10px, $divmargin: 15px){
+    body {
+        margin-left: $bodymargin;
+        margin-right: $bodymargin;
+    }
+    div {
+        margin-left: $divmargin;
+        margin-right: $divmargin;
+    }
 }
-div {
-    margin-left: $divmargin;
-    margin-right: $divmargin;
-}
+@include margins;
