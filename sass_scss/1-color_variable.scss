@@ -1,10 +1,11 @@
 /* My style */
+$color : #3D3D3D;
 body {
     .container {
-        color: #3D3D3D;
+        color: $color;
         @debug 'Hello world';
     }
 }
 p {
-    color: #3D3D3D;
+    color: $color;
 }
