@@ -680,7 +680,7 @@ ul.row {
     background-position: 50% 0;
 }
 .hero-article::before {
-    content: none;
+    content: "";
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
@@ -689,6 +689,7 @@ ul.row {
     bottom: 0;
     z-index: 0;
 }
+
 .hero-article .section-inner {
     text-align: center;
     align-items: center;
