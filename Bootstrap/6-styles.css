@@ -1,0 +1,28 @@
+hr {
+    background-color: #E0003C;
+}
+.btn-primary {
+    background-color: #E0003C;
+    border-color: #E0003C;
+}
+.btn-primary:hover {
+    background-color: #BC1340;
+    border-color: #E0003C;
+}
+.btn-outline-primary {
+    color: #E0003C;
+    border-color: #E0003C;
+}
+.btn-outline-primary:hover {
+    background-color: #E0003C;
+    border-color: #E0003C;
+
+}
+a {
+    color: #E0003C;
+}
+.card-header {
+    background-color: #E0003C;
+    color: white;
+    
+}
