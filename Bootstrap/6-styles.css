@@ -5,8 +5,8 @@ hr {
     background-color: #E0003C;
     border-color: #E0003C;
 }
-.btn-primary:hover {
-    background-color: #BC1340;
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus {
+    background-color: #bc1340;
     border-color: #E0003C;
 }
 .btn-outline-primary {
@@ -20,6 +20,13 @@ hr {
 }
 a {
     color: #E0003C;
+}
+.card {
+    border: #E0003C solid 1px;
+    border-radius: 1rem;
+}
+.card-header:first-child {
+    border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
 }
 .card-header {
     background-color: #E0003C;
