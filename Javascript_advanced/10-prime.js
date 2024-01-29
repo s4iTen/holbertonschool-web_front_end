@@ -1,28 +1,31 @@
 function countPrimeNumbers() {
-    function isPrime(num) {
-      if (num <= 1) return false;
-      for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false;
-      }
-      return true;
+  function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
     }
-  
-    let count = 0;
-    for (let i = 2; i <= 100; i++) {
-      if (isPrime(i)) {
-        count++;
-      }
-    }
-  
-    return count;
+    return true;
   }
-  const startTime = performance.now();
+
+  let count = 0;
+  for (let i = 2; i <= 100; i++) {
+    if (isPrime(i)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+const startTime = performance.now();
+setTimeout(() => {
   for (let i = 0; i < 100; i++) {
-      countPrimeNumbers();
+    var primenum = countPrimeNumbers();
   }
-  const endTime = performance.now();
-  const executionTime = endTime - startTime;
-  console.log(
-    `Execution time of counting prime numbers was ${executionTime} milliseconds.`
-  );
-  
+  return primenum;
+}, 0);
+const endTime = performance.now();
+const executionTime = endTime - startTime;
+
+console.log(
+  `Execution time of counting prime numbers was ${executionTime} milliseconds.`
+);
