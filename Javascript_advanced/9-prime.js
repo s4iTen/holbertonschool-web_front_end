@@ -17,7 +17,7 @@ function countPrimeNumbers() {
   return count;
 }
 const startTime = performance.now();
-const primeCount = countPrimeNumbers();
+countPrimeNumbers();
 const endTime = performance.now();
 const executionTime = endTime - startTime;
 console.log(
