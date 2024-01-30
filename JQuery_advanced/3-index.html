@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 0</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.js"
+      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <script>
+      function createFamilyTree() {
+        $("body").append("<table>");
+
+        $("table")
+          .append("<thead>")
+          .children("thead")
+          .append("<tr>")
+          .children("tr")
+          .append("<th>")
+          .append("<th>");
+        $("table thead tr th:first-child").text("Firstname");
+        $("table thead tr th:last-child").text("Lastname");
+
+        $("table").append("<tbody>");
+
+        $("table tbody")
+          .append("<tr>")
+          .children("tr:last-child")
+          .append("<td>")
+          .append("<td>");
+        $("table tbody tr:last-child td:first-child").text("Guillaume");
+        $("table tbody tr:last-child td:last-child").text("Salva");
+
+        $("table tbody")
+          .append("<tr>")
+          .children("tr:last-child")
+          .append("<td>")
+          .append("<td>");
+        $("table tbody tr:last-child td:first-child").text("Paulette");
+        $("table tbody tr:last-child td:last-child").text("Salva");
+
+        $("table tbody")
+          .append("<tr>")
+          .children("tr:last-child")
+          .append("<td>")
+          .append("<td>");
+        $("table tbody tr:last-child td:first-child").text("Antoine");
+        $("table tbody tr:last-child td:last-child").text("Salva");
+      }
+
+      createFamilyTree();
+    </script>
+  </body>
+</html>
