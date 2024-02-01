@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Search Wikipedia</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.js"
+      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      // Function to create the search form
+      function createSearchForm() {
+        // Create form elements
+        var form = $("<form>");
+        var input = $("<input>").attr({
+          type: "text",
+          placeholder: "Enter search term",
+        });
+        var submitBtn = $("<input>").attr({
+          type: "submit",
+          value: "Search",
+        });
+        var resultList = $("<ul>");
+
+        // Append elements to the body
+        $("body").append(
+          form.append(input).append(submitBtn).append(resultList)
+        );
+
+        // Handle form submission
+        form.submit(function (event) {
+          event.preventDefault();
+          var searchTerm = input.val();
+          queryWikipedia(searchTerm);
+        });
+      }
+
+      // Function to add new items to the list
+      function addNewArticle(id, title, snippet) {
+        // Create li element
+        var listItem = $("<li>");
+
+        // Create the first paragraph with span and b elements
+        var firstParagraph = $("<p>").html(
+          "<span>"+id+" - </span><b>" + title + "</b></span>"
+        );
+
+        // Create the second paragraph with the snippet
+        var secondParagraph = $("<p>");
+        secondParagraph.append(snippet);
+
+        // Append paragraphs to the li
+        listItem.append(firstParagraph).append(secondParagraph);
+
+        // Append li to the ul element
+        $("ul").append(listItem);
+      }
+
+      // Function to query Wikipedia and populate the list
+      function queryWikipedia(search) {
+        // Create a data object for the Wikipedia API request
+        var requestData = {
+          action: "query",
+          format: "json",
+          list: "search",
+          srsearch: search,
+        };
+
+        // Make the AJAX request to Wikipedia API
+
+          $.ajax({
+            url: "https://en.wikipedia.org/w/api.php",
+            method: "GET",
+            data: requestData,
+            dataType: "jsonp",
+            success: function (data) {
+              // Loop through the results and call addNewArticle for each
+              data.query.search.forEach(function (result) {
+                addNewArticle(result.pageid, result.title, result.snippet);
+              });
+            },
+            error: function (error) {
+              // Handle any errors that occur during the request
+              console.error(error);
+            },
+          });
+        }
+      
+      // Call the function to create the search form
+      createSearchForm();
+    </script>
+  </body>
+</html>
